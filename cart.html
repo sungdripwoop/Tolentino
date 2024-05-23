@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+  
+  <title>Rugged Pieces</title>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+  
+</head>
+<body>
+  <header> <!--HEADER-->
+    <div class="logoContainer">
+      <a href="index.html"><img src="Pictures/logo_hot.png" alt="Logo" class="logoIMG"></a>
+      <a href="home.html" class="logoTXT">Rugged Pieces</a>
+    </div>
+
+    <div class="navContainer">
+      <nav class="navlinks">
+        <a href="home.html" class="link">Home</a>
+        <a href="shop.html" class="link">Shop</a>
+        <a href="aboutus.html" class="link">About Us</a>
+        <a href="contactus.html" class="link">Contact Us</a>
+        <a class="link" id="searchbtn"><i class="fa-solid fa-magnifying-glass"></i></a>
+        <a class="link"><i class="fa-solid fa-cart-shopping"></i></a>
+      </nav>
+    </div>
+  </header>
+  <center><div class="searchContain" id="search">
+    <form action="#" method="get">
+      <input class="search" type="text" placeholder="Search..." name="search">
+      <button class="searchBTN" type="submit">Search</button>
+    </form>
+  </div></center><!--END OF HEADER-->
+
+  <div class="shopping-cart">
+    <center><h1>Shopping Cart</h1></center>
+    <div id="cartContainer" class="cart-items"></div>
+    <div class="cart-total">
+        <div class="subtotal">Total: <span id="subtotalAmount">₱0.00</span></div>
+        <div class="buttons">
+            <button onclick="cancel()">Cancel</button>
+            <button onclick="checkout()">Checkout</button>
+        </div>
+    </div>
+  </div>
+  
+    <footer><!--Footer-->
+    <center>
+      <div class="socials">
+        <h3>Socials</h3>
+      </div>
+      <div class="socialIcons">
+        <a class="socIconlink" href="https://www.facebook.com"  target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+        <a class="socIconlink" href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a class="socIconlink" href="https://www.twitter.com"   target="_blank"><i class="fa-brands fa-square-x-twitter"></i></a>
+      </div>
+    </center>
+    <div class = "CC">
+        <h6 class = "at"><center>©2024 by Woofshu</center></h6>
+    </div>
+  </footer><!--End of Footer-->
+
+  <script>
+    // Call the displayCart function when the cart page loads
+    window.onload = function() {
+        displayCart();
+    };
+
+    // Cancel function
+    function cancel() {
+      alert("Cancelling Order.");
+      alert("Cart now cleared. Redirecting to Home now.")
+      // Clear cart items from localStorage
+      localStorage.removeItem('cart');
+      // Redirect to the Home
+      window.location.href = 'home.html';
+    }
+
+    // Checkout function (you can implement the checkout process here)
+    function checkout() {
+      alert('Processing your order now and an email will be sent for the payment details. Thank You for your purchase!');
+      alert('Redirecting to Home now.')
+      localStorage.removeItem('cart');
+      window.location.href = 'home.html';
+    }
+</script>
+
+</body>
+</html>
