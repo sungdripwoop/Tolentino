@@ -64,7 +64,10 @@ header { /*Header*/
 .logoContainer {
   display: flex;
   align-items: center;
-  margin-right: 500px;
+  margin-right: auto;
+}
+.navcontainer{
+  margin-left: auto;
 }
 .logoIMG {
   width: 250px;
